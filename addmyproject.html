@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="./assets/css/styleadd.css">
+    <style>
+        .bordered {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <div class="container">
+
+        <nav>
+            <div class="left">
+                <img src="./assets/photo/logo.png" alt="">
+                <ul>
+                    <li class="li1">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="li2">
+                        <a href="addmyproject.html">My Project</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <div>
+                    <a href="contactme.html" target="_blank">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar end -->
+
+        <div class=" main">
+            <h2>ADD MY PROJECT</h2>
+
+            <div class="isi">
+                <form action="">
+                    <div>
+                        <label for="projectname">Project Name</label><br>
+                        <input class="input-name-project" type="text" id="dumbprojectname">
+                    </div>
+                    <div style="display: flex; margin-bottom: 17px;">
+                        <div>
+                            <label for="startDate">Start Date:</label><br>
+                            <input class="start-date" type="date" id="dumbstartDate" name="startDate">
+                        </div>
+                        <div>
+                            <label style="margin-left: 12px;" for="endDate">End Date:</label><br>
+                            <input class="end-date" type="date" id="dumbendDate" name="endDate">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="description">Description</label><br>
+                        <textarea
+                            style="margin-bottom: 13px; resize: none; border: 0px; border-radius: 5px; box-shadow: 5px 5px 20px darkgray;"
+                            name="" id="dumbdescription" cols="52" rows="9"></textarea>
+                    </div>
+                    <div style="margin-top: 10px; margin-bottom: 10px;">
+                        <div style="margin-bottom: 10px;">
+                            <label for="">Technologies</label><br>
+                        </div>
+                        <div class="checkbox" style="display: flex; flex-wrap: wrap;">
+                            <div>
+                                <input id="dumbnodeJs" type="checkbox">
+                                <label for="">Node Js</label>
+                            </div>
+                            <div>
+                                <input id="dumbvueJs" type="checkbox">
+                                <label for="">Vue Js</label>
+                            </div>
+                            <div>
+                                <input id="dumbreactJs" type="checkbox">
+                                <label for="">React Js</label>
+                            </div>
+                            <div>
+                                <input id="dumbphp" type="checkbox">
+                                <label for="">PHP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 40px;">
+                        <label for="">Upload Image</label><br>
+                        <div class="file">
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div>
+                        <button class="submit" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="" style="padding-top: 30px; height: 100%; width: 100%; background-color: rgb(248, 248, 248);">
+            <h1
+                style="margin-bottom: 50px; margin-left: 43%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                MY PROJECT</h1>
+            <div id="dumbcard"
+                style="display: flex; justify-content: space-evenly; flex-wrap: wrap; width: 1100px; margin-left: 10%;">
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- RESPONSIVE -->
+
+    <div class="responsive">
+        <nav class="res-nav">
+            <div class="res-left">
+                <img src="./assets/photo/logo.png" alt="">
+                <i style="font-size: 20px;" class="fa-solid fa-bars" onclick="openNav()"></i>
+            </div>
+        </nav>
+        <div class="res-hidebar" id="sideNav">
+            <a href="./index.html">Home</a>
+            <a href="./addmyproject.html">My Project</a>
+            <a href="./contactme.html">Contact Me</a>
+        </div>
+
+        <div class=" res-form">
+            <form action="" onsubmit="getData(event)">
+                <div>
+                    <label for="projectname">Project Name</label><br>
+                    <input class="satu" type="text" id="projectname">
+                </div>
+                <div class="res-container-duration">
+                    <div>
+                        <label for="startDate">Start Date</label><br>
+                        <input class="satu" type="date" id="startDate">
+                    </div>
+                    <div>
+                        <label for="endDate">End Date</label><br>
+                        <input class="satu" type="date" id="endDate">
+                    </div>
+                </div>
+                    <div>
+                    <label for="res-description">Description</label><br>
+                    <textarea name="" id="description" cols="41" rows="8"></textarea>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="res-technologies">Technologies</label><br>
+                </div>
+                <div class=" res-container-technologies">
+                    <div class="cekbok">
+                         <input id="nodeJs" type="checkbox">
+                         <label for="">Node Js</label>
+                    </div>
+                    <div class="cekbok">
+                         <input id="vueJs" type="checkbox">
+                         <label for="">Vue Js</label>
+                    </div>
+                    <div class="cekbok">
+                         <input id="reactJs" type="checkbox">
+                         <label for="">React Js</label>
+                    </div>
+                    <div class="cekbok">
+                         <input id="php" type="checkbox">
+                         <label for="">PHP</label>
+                    </div>
+                </div>
+                <div class=" res-up-image">
+                    <div style="margin-bottom: 10px;">
+                        <label for="">Upload Image</label><br>
+                    </div>
+                    <input class="bordered" type="file">
+                </div>
+                <div class="res-button"> 
+                    <button class="res-submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="" style="padding-top: 30px; height: 100%; width: 100%; background-color: rgb(248, 248, 248);">
+            <h1
+                style="margin-bottom: 50px; margin-left: 34%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                MY PROJECT</h1>
+            <div class="" id="card"
+                style="display: flex; justify-content: space-evenly; flex-wrap: wrap; width: 490px; margin-left: 5%;">
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/c5ec23200a.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scriptday4.js"></script>
+</body>
+
+</html>
